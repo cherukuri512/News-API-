@@ -1,0 +1,38 @@
+ogging:
+  level:
+    .: error
+    org.springframework: ERROR
+
+spring:
+  profiles:
+    active: "dev"
+  main:
+    banner-mode: "off"
+
+server:
+  port: 8085
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: ON_PARAM
+    include-exception: false
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+news-feed:
+  api-url: https://gnews.io/api/v4/search
+  api-key: d2fe04e4c26e86520f6856e0b11b8b9f
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+news-feed:
+  api-url: https://gnews.io/api/v4/search
+  api-key: d2fe04e4c26e86520f6856e0b11b8b9f
+
